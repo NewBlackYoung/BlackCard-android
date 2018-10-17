@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/two_five">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_title"
+        app:srlHeaderMaxDragRate="1"
+        app:srlHeaderTriggerRate="0.7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/black"
+            android:gravity="center">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                android:padding="50dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/timg" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+                <!--顶部图片-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@mipmap/card_top"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="310dp"
+                        android:layout_height="190dp">
+
+                        <ImageView
+                            android:id="@+id/iv_title_bg"
+                            android:layout_width="310dp"
+                            android:layout_height="190dp"
+                            android:background="@mipmap/jingying" />
+
+                        <TextView
+                            android:id="@+id/card_sn_split"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="22dp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/white" />
+
+                        <TextView
+
+                            android:id="@+id/user_piny"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="22dp"
+                            android:layout_marginRight="10dp" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <!-- 五个图标-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@mipmap/card_f"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_heiyoashi"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="10dp"
+                        android:drawableTop="@mipmap/yaoshi_h"
+                        android:gravity="center_horizontal"
+                        android:text="查看钥匙"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_duihuansp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="10dp"
+                        android:drawableTop="@mipmap/card_sp"
+                        android:gravity="center_horizontal"
+                        android:text="钥匙商城"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_heikabu"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="10dp"
+                        android:drawableTop="@mipmap/card_bl"
+                        android:gravity="center_horizontal"
+                        android:text="黑卡补换"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_qiinyou"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="10dp"
+                        android:drawableTop="@mipmap/card_bd"
+                        android:gravity="center_horizontal"
+                        android:text="亲友绑定"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_lookhuiji"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="10dp"
+                        android:drawableTop="@mipmap/card_lh"
+                        android:gravity="center_horizontal"
+                        android:text="查看会籍"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+                <!--黑卡余额字体-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="9dp"
+                        android:drawableLeft="@mipmap/point"
+                        android:drawablePadding="3dp"
+                        android:text="黑卡余额"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_more_yue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:text="查看更多>"
+                        android:textColor="@color/more" />
+                </RelativeLayout>
+
+                <!--黑卡余额显示部分-->
+                <LinearLayout
+                    android:id="@+id/ll_moreyue"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp "
+                    android:layout_marginTop="20dp"
+                    android:background="@mipmap/hei_zhong"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="95dp">
+
+                        <TextView
+                            android:id="@+id/tv_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="0.00"
+                            android:textColor="@color/more"
+                            android:textSize="36sp" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_money"
+                            android:layout_toLeftOf="@+id/tv_money"
+                            android:paddingBottom="7dp"
+                            android:text="¥"
+                            android:textColor="@color/more"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_money"
+                            android:layout_marginLeft="3dp"
+                            android:layout_toRightOf="@+id/tv_money"
+                            android:paddingBottom="7dp"
+                            android:text="元"
+                            android:textColor="@color/more"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/five_san" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tv_new"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="13dp"
+                                android:text="最新收益(元)"
+                                android:textColor="@color/more"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_newmoney"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_new"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="7dp"
+                                android:text="0.00"
+                                android:textColor="@color/more"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/tv_newmoney"
+                                android:layout_toLeftOf="@+id/tv_newmoney"
+                                android:paddingBottom="1dp"
+                                android:text="¥"
+                                android:textColor="@color/more"
+                                android:textSize="12sp" />
+
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/five_san" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tv_leiji"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="13dp"
+                                android:text="累计收益(元)"
+                                android:textColor="@color/more"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_leijimoney"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_leiji"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="7dp"
+                                android:text="0.00"
+                                android:textColor="@color/more"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/tv_leijimoney"
+                                android:layout_toLeftOf="@+id/tv_leijimoney"
+                                android:paddingBottom="1dp"
+                                android:text="¥"
+                                android:textColor="@color/more"
+                                android:textSize="12sp" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--现金-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="9dp"
+                        android:drawableLeft="@mipmap/point"
+                        android:drawablePadding="3dp"
+                        android:text="现金"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_more_xianjin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:text="查看更多>"
+                        android:textColor="@color/more" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_xianjin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"></android.support.v7.widget.RecyclerView>
+                </RelativeLayout>
+                <!--信用卡字体显示部分-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="9dp"
+                        android:drawableLeft="@mipmap/point"
+                        android:drawablePadding="3dp"
+                        android:text="信用卡"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_more_xinyongk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:text="查看更多>"
+                        android:textColor="@color/more" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_xiniyongka"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"></android.support.v7.widget.RecyclerView>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <View
+                        android:layout_width="80dp"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/tv"
+                        android:background="@color/more" />
+
+                    <TextView
+                        android:id="@+id/tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="别让平凡限制你的想象"
+                        android:textColor="@color/white" />
+
+                    <View
+                        android:layout_width="80dp"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv"
+                        android:background="@color/more" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

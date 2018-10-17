@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tv_name_coffee"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:text="并要回复撒谎范德"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_kind_coffee"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.6"
+        android:paddingLeft="10dp"
+        android:text="热中杯"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_price_coffee"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.2"
+        android:gravity="center"
+        android:text="¥44"
+        android:textColor="@color/e_eight" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp">
+
+        <ImageView
+            android:id="@+id/iv_jianhao_coffee"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/jianhao_baise" />
+
+        <TextView
+            android:id="@+id/tv_count_coffee"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="45"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_jiahao_coffee"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/jiahao_baise" />
+    </LinearLayout>
+
+</LinearLayout>

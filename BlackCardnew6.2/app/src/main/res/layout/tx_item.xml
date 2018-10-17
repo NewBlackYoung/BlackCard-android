@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tvmessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:text="+300"
+        android:textColor="@color/hei"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvmessagetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="12.5dp"
+        android:text="2016.06.20"
+        android:textColor="@color/hint"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvtype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvmessagetime"
+        android:layout_marginBottom="12.5dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="15dp"
+        android:text="状态"
+        android:textColor="@color/hint"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="@color/xian" />
+
+</RelativeLayout>

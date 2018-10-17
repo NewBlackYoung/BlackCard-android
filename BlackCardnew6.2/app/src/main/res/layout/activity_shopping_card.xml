@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shopping_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sainti.blackcard.shoppingcart.activity.ShoppingCardActivity">
+    <!--导航栏-->
+    <RelativeLayout
+        android:id="@+id/tv_title_sp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/baiback" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="购物车"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_bianjiaAlll"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="编辑"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+    <!--列表部分-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/xrv_sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_div"
+        android:layout_below="@+id/tv_title_sp"></android.support.v7.widget.RecyclerView>
+    <!--底部栏-->
+    <RelativeLayout
+        android:id="@+id/rl_div"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/bottom"
+        android:visibility="invisible">
+
+        <CheckBox
+            android:id="@+id/ck_allselsect_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:button="@drawable/select_checkbox_all" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/ck_allselsect_sp"
+            android:text="全选"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_heji_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="120dp"
+            android:text="合计 : "
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_zongjias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tv_heji_sp"
+            android:text="¥0.00"
+            android:textColor="@color/e_eight"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_jsOrdelete"
+            android:layout_width="80dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shap_jiesuan_sp"
+            android:gravity="center"
+            android:text="结算"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rll_null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_title_sp"
+        android:background="@color/colorWhite"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/tv_null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/card_null" />
+    </RelativeLayout>
+
+</RelativeLayout>

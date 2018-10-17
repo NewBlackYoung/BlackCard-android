@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sainti.blackcard.HomePageActivity">
+
+    <LinearLayout
+        android:id="@+id/lay_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/statusBar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/btn_tequan"
+                style="@style/tab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/btn_tab1"
+                android:gravity="center"
+                android:text="特权"
+                android:textColor="@color/e_eight" />
+
+            <ImageView
+                android:id="@+id/ren_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="32dp"
+                android:src="@mipmap/yuan_h"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/btn_quanzai"
+            style="@style/tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/btn_tab3"
+            android:gravity="center"
+            android:text="圈子"
+            android:textColor="@color/e_eight" />
+
+        <TextView
+            android:id="@+id/btn_heika"
+            style="@style/tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/btn_tab2"
+            android:gravity="center"
+            android:text="黑卡"
+            android:textColor="@color/e_eight" />
+
+        <TextView
+            android:id="@+id/btn_mine"
+            style="@style/tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/btn_tab4"
+            android:gravity="center"
+            android:text="我"
+            android:textColor="@color/e_eight" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragmlayout_houmepage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lay_ll"></FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_update"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/eight_zero"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="350dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="140dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="325dp"
+                android:background="@mipmap/upd" />
+
+            <TextView
+                android:id="@+id/tv_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="120dp"
+                android:lineSpacingExtra="2dp"
+                android:text="版本更新的文大萨达撒打撒多字"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_update_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp"
+                android:background="@mipmap/upd_btn" />
+
+            <RelativeLayout
+                android:id="@+id/ll_notupdate"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:id="@+id/iv_notupdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="9dp"
+                    android:background="@mipmap/upd_n" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_beijing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#a9000000"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_goToset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/put" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/new_personBeijing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#a9000000"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_newp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/newp" />
+
+        <ImageView
+            android:id="@+id/iv_toguanjia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_newp"
+            android:layout_alignLeft="@+id/iv_newp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:background="@mipmap/tohuanj" />
+
+        <ImageView
+            android:id="@+id/iv_know"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_newp"
+            android:layout_alignRight="@+id/iv_newp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/zhennow" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

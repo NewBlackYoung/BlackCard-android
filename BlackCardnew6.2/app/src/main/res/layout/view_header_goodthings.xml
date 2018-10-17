@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/card_to"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@mipmap/card_to" />
+
+        <ImageView
+            android:id="@+id/iv_header"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/card_to"
+            android:layout_gravity="center_horizontal"
+            android:background="@mipmap/to_kind"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/red_poin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/card_to"
+            android:background="@mipmap/icon_num" />
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="wrap_content"
+            android:layout_height="110dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/card_to"></com.youth.banner.Banner>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="· 推荐 ·"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="RECOMMENT"
+        android:textColor="@color/naine_five" />
+
+</LinearLayout>

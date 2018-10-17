@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/chart_bg" />
+
+
+    <RelativeLayout
+        android:id="@+id/rela_xiao"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@mipmap/youhuijuanbeijing">
+
+        <TextView
+            android:id="@+id/tv_mingcheng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="优惠券名称"
+            android:textColor="@color/hint"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/hint"
+            android:text="有效期至:"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tv_jiage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="15dp"
+            android:text="12"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/huang"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_jiage"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/tv_jiage"
+            android:text="¥"
+            android:textColor="@color/huang" />
+
+        <View
+            android:id="@+id/view_yinying"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/weitouming"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

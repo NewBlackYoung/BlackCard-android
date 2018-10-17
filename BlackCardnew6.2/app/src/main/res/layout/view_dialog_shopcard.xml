@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#c7000000">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:background="@drawable/shap_jiesuan">
+
+        <TextView
+            android:id="@+id/tv_delelteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:lineSpacingExtra="1dp"
+            android:text="确定删除该宝贝吗?"
+            android:textColor="@color/e_eight"
+            android:textSize="16sp" />
+        <View
+            android:layout_above="@+id/tv_teleteCso"
+            android:background="@color/more"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <TextView
+            android:id="@+id/tv_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_delelteText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/e_eight"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_teleteCso"
+            android:layout_width="140dp"
+            android:layout_height="47dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shap_quxiao"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_deleteSure"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/tv_teleteCso"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/e_eight"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+</RelativeLayout>

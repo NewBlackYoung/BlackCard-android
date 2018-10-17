@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sainti.blackcard.mwebview.NormalWebActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_heiyaoshi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/yoashishangh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/yoashishangh" />
+
+        <ImageView
+            android:id="@+id/yaoshito"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/yaoshito" />
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/web_Detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_heiyaoshi"
+        android:layout_weight="1"></WebView>
+
+    <View
+        android:id="@+id/v_beiijing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/eight_zero"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/lay_get"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@mipmap/erweimabeijing"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_erweima"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_zhaohuan"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/huang"
+        android:gravity="center"
+        android:text="召唤管家"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/huoquhjei"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/shap_heiyao"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:text="获取钥匙"
+        android:textColor="@color/black" />
+</RelativeLayout>

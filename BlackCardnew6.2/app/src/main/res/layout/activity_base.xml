@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:id="@+id/lay_title_base"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/statusBar">
+
+        <ImageView
+            android:id="@+id/iv_title_leftOne"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/blackwhite" />
+
+        <TextView
+            android:id="@+id/tv_titleText_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/size_title" />
+
+        <ImageView
+            android:id="@+id/iv_title_rightOne"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_titleText_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="dsad"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_title_rightTwo"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/iv_title_rightOne"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <!-- 内容部分-->
+    <LinearLayout
+        android:id="@+id/base_body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"></LinearLayout>
+</LinearLayout>

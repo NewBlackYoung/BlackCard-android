@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.sainti.blackcard.housekeeperorder.activity.HousekeeperOrderActivity">
+
+    <android.support.design.widget.TabLayout
+        app:tabTextColor="@color/statusBar"
+        app:tabIndicatorColor="@color/none"
+        app:tabSelectedTextColor="@color/more"
+        app:tabBackground="@drawable/select_tab_guanjia"
+        android:id="@+id/tab_ho"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"></android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:background="@color/white"
+        android:id="@+id/vp_ho"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

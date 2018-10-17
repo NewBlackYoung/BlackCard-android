@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_comment_goodthings"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@mipmap/icon_def"
+       android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_commentTtiletv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_comment_goodthings"
+        android:layout_marginTop="3dp"
+        android:maxLines="1"
+        android:textColor="@color/minetext" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_commentTtiletv"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="专享价"
+            android:textColor="@color/minetext"
+            android:textSize="10sp" />
+
+        <TextView
+
+            android:id="@+id/tv_commentPice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="￥111"
+            android:textColor="@color/black" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="3dp">
+
+
+            <TextView
+                android:id="@+id/tv_commentYuanjia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="￥155"
+                android:textSize="8sp" />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:background="@color/seven_two" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

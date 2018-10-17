@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_card_order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.sainti.blackcard.shoppingcart.activity.CardOrderActivity">
+
+    <RelativeLayout
+        android:id="@+id/lay_header"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/adress_sp"
+        android:paddingLeft="20dp"
+        android:paddingTop="12dp">
+
+        <TextView
+            android:id="@+id/tv_zhezhiAdress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="请设置收获地址"
+            android:textColor="@color/e_eight"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收货地址"
+            android:textColor="@color/e_eight"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_bianjia_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="11dp"
+            android:src="@mipmap/xie_sp" />
+
+        <TextView
+            android:text="dsadsa1651615616123"
+            android:id="@+id/tv_adress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_ad"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="3dp"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:text="dsadsa"
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_adress"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:text="dsadsa"
+            android:id="@+id/tv_tle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_adress"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tv_name"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lay_youhui"
+        android:layout_below="@+id/lay_header"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"></android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/lay_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/two_five">
+
+        <TextView
+            android:id="@+id/tv_heji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="合计:"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_price_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tv_heji"
+            android:textColor="@color/e_eight"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_price_old"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_price_now"
+            android:background="@mipmap/xian_b"
+            android:textColor="@color/a_b"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_commint"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shap_jiesuan_sp"
+            android:gravity="center"
+            android:text="提交订单"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <!--备注部分-->
+    <LinearLayout
+        android:id="@+id/ll_ed"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/lay_bottom"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ed_c" />
+
+        <EditText
+            android:id="@+id/id_beizhu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="备注留言"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/black"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+    <!--黑钥匙-->
+    <RelativeLayout
+        android:id="@+id/ll_key"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/ll_ed"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/c_e" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/c_e" />
+
+        <TextView
+            android:id="@+id/tv_cankey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_marginTop="2dp"
+            android:id="@+id/iv_getkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tv_cankey"
+            android:background="@mipmap/wenhao" />
+
+        <CheckBox
+            android:id="@+id/chek_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:button="@drawable/selector_checkbox_key" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_youhui"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_above="@+id/ll_key"
+
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/_iv_yohui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@mipmap/yohuiquan" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/_iv_yohui"
+            android:text="优惠券"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_choiceP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="7dp"
+            android:layout_toStartOf="@+id/iv_danba"
+            android:text="选择优惠券"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_danba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/fanjiantou" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/lay_getkey"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/eight_zero"
+       >
+
+        <RelativeLayout
+            android:layout_marginTop="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="230dp"
+            android:layout_height="300dp"
+
+            android:background="@mipmap/getkey">
+
+            <TextView
+                android:id="@+id/tv_know"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/shap_jiesuan_sp"
+                android:gravity="center"
+                android:text="知道了"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

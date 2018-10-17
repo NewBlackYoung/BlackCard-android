@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp">
+
+    <ImageView
+        android:id="@+id/left"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp"
+        android:background="@mipmap/left_b" />
+
+    <ImageView
+        android:id="@+id/right_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp"
+        android:layout_marginLeft="25dp"
+        android:background="@mipmap/line_cir" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/keycount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/one_b" />
+
+
+        <ImageView
+            android:id="@+id/daycount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@mipmap/tuyuan_one" />
+
+        <TextView
+            android:id="@+id/tv_Day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/daycount"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="1天"
+            android:textColor="@color/e_eight"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/dingdanxiangqing"
+    tools:context=".homepage.splash.activity.MemberLoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/lay_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/blackwhite" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/fakajinu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:text="发卡进度查询"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="@mipmap/dengluye_logo" />
+
+    <LinearLayout
+        android:id="@+id/lyren"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/logo_username" />
+
+            <EditText
+                android:id="@+id/etcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/transplant"
+                android:hint="卡号/手机号"
+                android:singleLine="true"
+                android:textColor="@color/huihui"
+                android:textColorHint="@color/huihui"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginTop="15dp"
+            android:background="#B3ffffff" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/logo_password"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/logo_password" />
+
+            <EditText
+                android:id="@+id/etpwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/logo_password"
+                android:background="@color/transplant"
+                android:hint="登录密码"
+                android:password="true"
+                android:singleLine="true"
+                android:textColor="@color/huihui"
+                android:textColorHint="@color/huihui"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_puth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="发送验证码"
+                android:textColor="@color/huihui"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginTop="15dp"
+            android:background="#B3ffffff" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/lyren"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shap_jiesuan_sp"
+        android:text="登录"
+        android:textColor="#0e0c0c"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvchong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnlogin"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="30dp"
+        android:text="忘记密码"
+        android:textColor="@color/huihui"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvyanzhengma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/btnlogin"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="30dp"
+        android:text="验证码登录"
+        android:textColor="@color/huihui"
+        android:textSize="14sp" />
+</RelativeLayout>

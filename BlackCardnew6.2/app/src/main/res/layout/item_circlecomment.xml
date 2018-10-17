@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_comment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:paddingBottom="15dp">
+
+    <ImageView
+        android:id="@+id/iv_imagePhoto"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="3dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/l"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/iv_imagePhoto">
+
+        <TextView
+
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLength="8"
+
+            android:textColor="@color/nine_b"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_huifu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tv_name"
+            android:text="回复"
+            android:textColor="@color/two_five"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_hui_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tv_huifu"
+            android:ellipsize="end"
+            android:maxLength="8"
+            android:textColor="@color/nine_b"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+
+            android:textColor="@color/seven_two"
+            android:textSize="9dp" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="5dp"
+
+            android:textSize="13sp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/l"
+        android:background="@color/c_e" />
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/or_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:ellipsize="end"
+            android:maxLength="9"
+            android:maxLines="1"
+            android:text="个数"
+            android:textColor="@color/colorWhite"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/or_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:maxLength="9"
+            android:maxLines="1"
+            android:text="mingiz"
+            android:textColor="@color/colorWhite"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/or_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLength="9"
+            android:maxLines="1"
+            android:text="你好啊啊啊啊啊啊"
+            android:textColor="@color/colorWhite"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+</LinearLayout>

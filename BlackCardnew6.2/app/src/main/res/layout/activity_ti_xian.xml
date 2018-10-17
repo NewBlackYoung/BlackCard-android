@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sainti.blackcard.privilege.activity.TiXianActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg_gray">
+
+        <RelativeLayout
+            android:id="@+id/rlbcard"
+            style="@style/HeadBar">
+
+            <ImageView
+                android:id="@+id/friendback"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ease_back" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="申请提现"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/iv_zixun"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/wenhaohei" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="14dp">
+
+                <TextView
+                    android:id="@+id/tvf_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="取款人"
+                    android:textColor="@color/hei"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/tvf_name"
+                    android:background="@color/transplant"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/hintcolor"
+                    android:textColorHint="@color/hintcolor"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="14dp"
+                android:background="@color/xian" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="14dp">
+
+                <TextView
+                    android:id="@+id/tvfhu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="支付宝"
+                    android:textColor="@color/hei"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/zhifubao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/tvfhu"
+                    android:background="@color/transplant"
+                    android:gravity="right"
+                    android:hint="请输入支付宝账号"
+                    android:singleLine="true"
+                    android:textColor="@color/hintcolor"
+                    android:textColorHint="@color/hintcolor"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="14dp"
+                android:background="@color/xian" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="14dp">
+
+                <TextView
+                    android:id="@+id/tvfpwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="提现金额"
+                    android:textColor="@color/hei"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/jine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/tvfpwd"
+                    android:background="@color/transplant"
+                    android:inputType="numberDecimal"
+                    android:gravity="right"
+                    android:hint="请输入金额"
+                    android:singleLine="true"
+                    android:textColor="@color/hintcolor"
+                    android:textColorHint="@color/hintcolor"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="14dp"
+                android:background="@color/xian" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="14dp">
+
+            <TextView
+                android:id="@+id/tv_zongjine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前可提现金额:"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_quanbu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全部提现"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:textSize="12sp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_tixian"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="申请提现"
+            android:background="@drawable/bg_corner_huangquanxiao"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="本服务由支付宝提供技术支持"
+        android:textColor="@color/colorhei"
+        android:textSize="12sp" />
+
+</RelativeLayout>

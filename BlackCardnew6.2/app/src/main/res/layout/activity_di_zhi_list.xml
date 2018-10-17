@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sainti.blackcard.goodthings.activity.DiZhiListActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlbcard"
+        android:layout_marginBottom="60dp"
+        android:background="@color/chart_bg1">
+
+        <LinearLayout
+            android:id="@+id/lin_dizhi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/lin_xiafang"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/chart_bg1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_xinzeng"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_corner_huangquan"
+            android:gravity="center"
+            android:text="新增地址"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_yuan"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_corner_whitequan"
+        android:visibility="gone" />
+
+
+    <View
+        android:id="@+id/view_yinying"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/quantouming"
+        android:visibility="gone" />
+</RelativeLayout>

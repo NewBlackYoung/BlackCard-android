@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_address_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/two_five"
+    tools:context="com.sainti.blackcard.coffee.activity.AddressSettingActivity">
+
+    <View
+        android:id="@+id/linr"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linr"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@mipmap/point"
+            android:drawablePadding="3dp"
+            android:text="姓名"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adress_tx_size" />
+
+        <EditText
+            android:id="@+id/et_nameUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:hint="请输入姓名"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/a_b"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_hight"
+            android:layout_marginTop="10dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dp"
+            android:drawableLeft="@mipmap/point"
+            android:drawablePadding="3dp"
+            android:text="手机号码"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adress_tx_size" />
+
+        <EditText
+            android:id="@+id/et_namberUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:hint="配送员将以此联系您"
+            android:inputType="phone|number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/a_b"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_hight"
+            android:layout_marginTop="10dp"
+            android:background="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/tv_shengfen"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:hint=""
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/a_b"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/linr_two"
+                android:layout_width="80dp"
+                android:layout_height="@dimen/line_hight"
+                android:layout_below="@+id/tv_shengfen"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/sheng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_shengfen"
+                android:text="省"
+                android:textColor="@color/white"
+                android:textSize="@dimen/adress_tx_size" />
+
+            <EditText
+                android:id="@+id/tv_shi"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/sheng"
+                android:background="@null"
+                android:hint=""
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:paddingLeft="3dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/a_b"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="@dimen/line_hight"
+                android:layout_below="@+id/tv_shengfen"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/sheng"
+                android:background="@color/white" />
+
+            <TextView
+
+                android:id="@+id/shi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_shi"
+                android:text="市"
+                android:textColor="@color/white"
+                android:textSize="@dimen/adress_tx_size" />
+
+            <EditText
+                android:id="@+id/tv_qu"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/shi"
+                android:background="@null"
+                android:hint=""
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/a_b"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="@dimen/line_hight"
+                android:layout_below="@+id/tv_shengfen"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/shi"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/qu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_qu"
+                android:text="区"
+                android:textColor="@color/white"
+                android:textSize="@dimen/adress_tx_size" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:drawableLeft="@mipmap/point"
+            android:drawablePadding="3dp"
+            android:text="详细地址"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adress_tx_size" />
+
+        <EditText
+            android:id="@+id/tv_xiangxiadress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="写字楼、地标建筑名称、门牌号"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/a_b"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_hight"
+            android:layout_marginTop="10dp"
+            android:background="@color/white" />
+    </LinearLayout>
+
+    <TextView
+
+        android:id="@+id/tv_save"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shap_leftcoffee_selet"
+        android:gravity="center"
+        android:text="保存"
+        android:textColor="@color/black" />
+</RelativeLayout>

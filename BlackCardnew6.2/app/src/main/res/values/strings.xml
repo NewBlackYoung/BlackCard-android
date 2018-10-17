@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">青年黑卡</string>
+    <string name="title_activity_member_msg">MemberMsgActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+     >
+
+        <TextView
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:id="@+id/co_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="30dp"
+
+            android:textColor="@color/e_eight"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/cl_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/co_name"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="10dp"
+
+            android:textColor="@color/c_e" />
+
+
+        <TextView
+            android:id="@+id/co_dizhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="25dp"
+
+            android:textColor="@color/e_eight"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/co_dizhi"
+            android:layout_toLeftOf="@+id/co_dizhi"
+            android:paddingBottom="4dp"
+            android:text="￥"
+            android:textColor="@color/e_eight"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/co_stype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/co_dizhi"
+            android:layout_marginRight="40dp"
+
+            android:textColor="@color/e_e" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sainti.blackcard"> <!-- 友盟统计 -->
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- Required -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 环信另外需要的 -->
+    <application
+        android:name=".base.MyApp"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Design.Light.NoActionBar"
+        tools:replace="android:hardwareAccelerated,android:name">
+
+        <!-- 以下是环信 -->
+        <receiver
+            android:name=".commen.puth.MessageReceiver"
+            android:exported="true">
+            <intent-filter>
+
+                <!-- 接收消息透传 -->
+                <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
+                <!-- 监听注册、反注册、设置/删除标签、通知被点击等处理结果 -->
+                <action android:name="com.tencent.android.tpush.action.FEEDBACK" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 以上是环信 -->
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="ff9a3ba1ebe217f90607aebe0cfd3453" /> <!-- 高德地图 -->
+        <service android:name="com.amap.api.location.APSService" /> <!-- 高德地图 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.sainti.blackcard.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider> <!-- 7.0 以后会的照相机权限 -->
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".utils.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoDisplay" />
+
+        <!-- 注册登录微信回调 WXEntryActivity -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent" />
+        <!-- 下面是友盟配置 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="58a67570c62dca56d9002372" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="yingyongbao" />
+
+        <!-- 上面是友盟配置 -->
+        <activity android:name=".homepage.activity.HomePageActivity" />
+        <activity android:name=".base.BaseNoTitleActivity" />
+        <activity android:name=".base.BaseTitleActivity" />
+        <activity android:name=".homepage.splash.activity.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".homepage.splash.activity.LoginActivity" />
+        <activity android:name=".mwebview.NormalWebActivity" />
+        <activity android:name=".homepage.splash.activity.MemberLoginActivity" />
+        <activity android:name=".homepage.splash.activity.ForgetPsWdActivity" />
+        <activity
+            android:name=".homepage.splash.activity.MemberMsgActivity"
+            android:label="@string/title_activity_member_msg" />
+        <activity android:name=".homepage.splash.activity.ChoiceSexActivity" />
+        <activity android:name=".circle.cwebview.TopWebActivity" />
+        <activity android:name=".circle.activity.TopicDetailActivity" />
+        <activity android:name=".circle.activity.FindDetailActivity" />
+        <activity
+            android:name="com.lidong.photopicker.PhotoPickerActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/PhotoPickerTheme" />
+        <activity
+            android:name="com.lidong.photopicker.PhotoPreviewActivity"
+            android:theme="@style/PhotoPickerTheme" />
+        <activity android:name=".circle.activity.MineCircleActivity" />
+        <activity android:name=".circle.activity.OtherCircleActivity" />
+        <activity android:name=".circle.activity.FansActivity" />
+        <activity android:name=".circle.activity.MyFollowActivity" />
+        <activity android:name=".circle.activity.MessageActivity" />
+        <activity android:name=".circle.releasecircle.activity.ReleaseCircleActivity" />
+        <activity android:name=".circle.releasecircle.activity.TopicActivity" />
+        <activity android:name=".mwebview.CommenWebActivity" />
+        <activity
+            android:name=".goodthings.activity.HaoWuXianDanActivity"
+            android:configChanges="keyboard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".goodthings.activity.DiZhiListActivity" />
+        <activity android:name=".goodthings.activity.XinZengDiZhiActivity" />
+        <activity android:name=".goodthings.activity.YouHuiJuanActivity" />
+        <activity android:name=".goodthings.activity.HaoWuZhiFuActivity" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity android:name=".mwebview.PingAnPayWebView" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity android:name=".mwebview.PingAnWebView" />
+        <activity android:name=".privilege.activity.QianBaoActivity" />
+        <activity android:name=".privilege.activity.TixianjiluActivity" />
+        <activity android:name=".privilege.activity.TiXianActivity" />
+        <activity android:name=".mwebview.PPdWebActivity" />
+        <activity android:name=".mwebview.LookMemberActivity" />
+        <activity android:name=".goodthings.activity.GoodthingsListActivity" />
+        <activity android:name=".goodthings.activity.SelectionChoiceActivity" />
+        <activity android:name=".privilege.moreprivilege.activity.MoreTeQuanActivity" />
+        <activity android:name=".goodthings.spcard.activity.ShoppingCardActivity" />
+        <activity android:name=".goodthings.spcard.activity.AdressListActivity" />
+        <activity android:name=".goodthings.spcard.activity.CardOrderActivity" />
+        <activity android:name=".goodthings.spcard.activity.CouponActivity" />
+        <activity android:name=".goodthings.spcard.activity.WriteAdressActivity" />
+        <activity android:name=".coffee.activity.AddressSettingActivity" />
+        <activity android:name=".coffee.activity.CoffeeActivity" />
+        <activity android:name=".coffee.activity.CoffeeOrderDetailActiviity" />
+        <activity android:name=".my.activity.PersonalActivity" />
+        <activity android:name=".my.activity.ChangeTrainActivity" />
+        <activity android:name=".my.activity.HezuoActivity" />
+        <activity android:name=".my.activity.ChangeActivity" />
+        <activity android:name=".my.activity.SetActivity" />
+        <activity android:name=".my.activity.YinSiActivity" />
+        <activity android:name=".housekeeperorder.activity.HousekeeperOrderActivity" />
+        <activity android:name=".housekeeperorder.activity.HkOrderDetailActivity" />
+        <activity android:name=".goodthings.goodtingsorder.activity.GoodThingOsderActivity" />
+        <activity android:name=".goodthings.goodtingsorder.activity.GoodthingsOrderDetailActivity" />
+        <activity android:name=".mblcakcard.activity.FriendListActivity" />
+        <activity android:name=".mblcakcard.activity.AddFriendActivity" />
+        <activity android:name=".coffee.coffeeorder.activity.CoffeeOrderListActivity" />
+        <activity android:name=".mwebview.WuliuWebViewActivity" />
+        <activity android:name=".my.flyorder.activity.FlyOrderActivity" />
+        <activity android:name=".my.flyorder.activity.FlyOrderDetailActivity" />
+        <activity android:name=".housekeeperorder.activity.PaySuceesActivity" />
+        <activity android:name=".chat.activity.ChatRoomActivity" />
+        <activity android:name=".chat.activity.LiyouActivity" />
+        <activity android:name=".mwebview.HeiKaBuhuanWebActivity" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".mwebview.primary.MembershipUpgradeActivity" />
+        <activity android:name=".circle.activity.DakaActivity" />
+        <activity android:name=".my.flyorder.drivinglicense.actvity.DrivingLicenseActivity" />
+        <activity android:name=".my.flyorder.drivinglicense.actvity.DrivingDetailActivity" />
+        <activity android:name=".my.coupon.activity.CommentCouponActivity" />
+        <activity android:name=".my.bonus.activity.MyBonusActivity" />
+        <activity android:name=".goodthings.activity.NewListActivity" />
+        <activity android:name=".homepage.splash.activity.MemberBindActivity" />
+        <activity android:name=".privilege.activity.XianjinActivity" />
+        <activity android:name=".my.invitingcourtesy.activity.InvitAcitvity" />
+        <activity android:name=".my.invitingcourtesy.activity.CourtesyActivity" />
+        <activity android:name=".my.invitingcourtesy.activity.LookCouttesyActivity" />
+        <activity android:name=".my.taskcenter.activity.TaskCenterAcvitity" />
+        <activity android:name=".base.newbase.MBaseWebActivity" />
+        <activity android:name=".commen.text.TextWebView" />
+        <activity android:name=".commen.text.TextmvpActivity"></activity>
+    </application>
+
+</manifest>

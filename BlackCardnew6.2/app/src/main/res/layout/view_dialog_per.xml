@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="170dp">
+    <LinearLayout
+        android:id="@+id/lin1"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_corner_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/xiugai_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorWhite"
+            android:text="E-mail"
+            android:textColor="@color/huihui"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/bg_gray" />
+
+            <EditText
+                android:id="@+id/xiugai_neirong"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:textColor="@color/huihui"
+                android:textColorHint="@color/hui_backqian" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/bg_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_quxiao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="取消"
+                android:textColor="@color/huihui" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/bg_gray" />
+
+            <TextView
+                android:id="@+id/tv_queding"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+
+                android:text="确定"
+                android:textColor="@color/huihui" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

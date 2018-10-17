@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:easemob="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <com.hyphenate.helpdesk.easeui.widget.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        easemob:titleBarLeftImage="@drawable/hd_mm_title_back" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:text="青年黑卡"
+            android:id="@+id/iv_image_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="9dp"
+            android:textColor="@color/emojicon_tab_nomal" />
+
+        <TextView
+            android:id="@+id/tv_tousu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="投诉"
+            android:textColor="@color/main_text_color" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="1px"
+            android:layout_height="1px"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/input_menu"
+        android:layout_below="@id/title_bar">
+
+        <com.hyphenate.helpdesk.easeui.widget.MessageList
+            android:id="@+id/message_list"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <com.hyphenate.helpdesk.easeui.widget.EaseChatInputMenu
+        android:id="@+id/input_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:id="@+id/tv_tip_waitcount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/input_menu"
+        android:background="@android:color/darker_gray"
+        android:paddingBottom="3dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="3dp"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/lay_jianjieyu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/eight_zero">
+
+        <LinearLayout
+            android:layout_width="240dp"
+            android:layout_height="350dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:background="@color/emojicon_tab_nomal"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="常用语快捷发送"
+                android:textColor="@color/statusBar"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_dingjiudian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="请帮我订酒店"
+                android:textColor="@color/statusBar"
+                android:textSize="12sp" />
+            <View
+                android:layout_marginTop="10dp"
+                android:background="@color/c_e"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+            <TextView
+                android:id="@+id/tv_lookorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="请问好物订单如何查询"
+                android:textColor="@color/statusBar"
+                android:textSize="12sp" />
+            <View
+                android:layout_marginTop="10dp"
+                android:background="@color/c_e"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+            <TextView
+                android:id="@+id/tv_lookhangban"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="请帮我查下航班"
+                android:textColor="@color/statusBar"
+                android:textSize="12sp" />
+            <View
+                android:layout_marginTop="10dp"
+                android:background="@color/c_e"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

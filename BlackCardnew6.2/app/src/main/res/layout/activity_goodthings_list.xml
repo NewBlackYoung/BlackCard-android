@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sainti.blackcard.goodthings.activity.GoodthingsListActivity">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_title"
+        app:srlHeaderMaxDragRate="1"
+        app:srlHeaderTriggerRate="0.7">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                android:padding="50dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/timg" />
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/xrv_goodThing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"></android.support.v7.widget.RecyclerView>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_shopping"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="35dp"
+        android:background="@mipmap/shopping_card">
+
+        <ImageView
+            android:id="@+id/iv_isHaiCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="13dp"
+            android:background="@mipmap/hongdian" />
+    </RelativeLayout>
+</RelativeLayout>

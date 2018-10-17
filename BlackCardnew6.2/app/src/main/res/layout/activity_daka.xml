@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_e"
+    android:orientation="vertical"
+    tools:context="com.sainti.blackcard.circle.activity.DakaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/daka_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@mipmap/point"
+            android:drawablePadding="3dp"
+            android:text="连续记录"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ppd_font_size_16_sp" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_daka"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp">
+
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/daka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="15dp"
+             />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@mipmap/daka_guize" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/heka_j" />
+</LinearLayout>

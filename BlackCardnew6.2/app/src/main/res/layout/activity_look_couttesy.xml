@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".my.invitingcourtesy.activity.LookCouttesyActivity">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/black">
+
+
+        <ImageView
+            android:id="@+id/iv_title_leftOne"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/blackwhite" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="查看邀请"
+            android:textColor="@color/white" />
+
+
+        <LinearLayout
+            android:id="@+id/tv_toGuanjia"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/guanjia" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:text="召唤管家"
+                android:textColor="@color/e_eight"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@color/white"
+            android:paddingLeft="15dp"
+            android:text="满足邀请两人后可进行申请"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/iv_change"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+           />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/yaoqing_di" />
+
+        <LinearLayout
+            android:id="@+id/ll_r"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp">
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="1.5dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/yao"
+                android:textStyle="bold"
+                android:layout_margin="3dp"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="邀请人数"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="1.5dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/colorWhite" />
+        </LinearLayout>
+
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/runshu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_r"
+            android:layout_centerHorizontal="true"
+            android:text="2"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/ll_center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/e_eight" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="7dp"
+                android:text="邀请记录"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_invitlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

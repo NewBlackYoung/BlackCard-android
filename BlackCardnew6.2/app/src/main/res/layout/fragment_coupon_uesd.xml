@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gif_bg">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"></android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/noused"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/e_eight"
+        android:gravity="center"
+        android:text="不使用"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="hh">30dp</dimen>
+    <dimen name="title_height">50dp</dimen>
+    <dimen name="size_title">17sp</dimen>
+    <dimen name="height_top_bar">46dp</dimen>
+    <dimen name="padding_search_bar">5dp</dimen>
+    <dimen name="height_row_weixin">59dp</dimen>
+    <dimen name="size_avatar">48dp</dimen>
+    <dimen name="margin_chat_activity">5dp</dimen>
+    <dimen name="field_textsize">14sp</dimen>
+    <dimen name="field_margin_right">5dp</dimen>
+    <dimen name="call_button_padding_vertical">10dp</dimen>
+    <dimen name="call_button_padding_left">25dp</dimen>
+    <dimen name="call_button_padding_right">25dp</dimen>
+    <dimen name="sidebar_text_size">10dp</dimen>
+    <dimen name="image_thumbnail_size">100dp</dimen>
+    <dimen name="image_thumbnail_spacing">1dp</dimen>
+    <dimen name="chat_nick_margin_left">12dp</dimen>
+    <dimen name="chat_nick_text_size">13sp</dimen>
+    <dimen name="ppd_font_size_18_sp">18sp</dimen>
+    <dimen name="ppd_font_size_12_sp">12sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="line_hight">0.5dp</dimen>
+    <dimen name="custom_item_height">120dp</dimen>
+    <dimen name="font_xxxlarge">16sp</dimen>
+    <dimen name="font_medium">14sp</dimen>
+    <dimen name="adress_tx_size">18sp</dimen>
+    <dimen name="item_left_shop">10dp</dimen>
+    <dimen name="four_image">80dp</dimen>
+    <dimen name="dingdansize">12sp</dimen>
+    <dimen name="mine_shehgh">60dp</dimen>
+</resources>

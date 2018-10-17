@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/two_five"
+    android:gravity="center_vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="20dp">
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:button="@drawable/select_checkbox_all"
+         />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="30dp"
+        android:background="@mipmap/coupon">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="13dp"
+            android:textColor="@color/quan"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_tiaojian"
+            android:layout_width="105dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:textColor="@color/six_two"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tiaojian"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/quan"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="33dp"
+            android:textColor="@color/quan"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:paddingTop="10dp"
+            android:text="元"
+            android:textColor="@color/quan"
+            android:textSize="8sp" />
+
+    </RelativeLayout>
+</LinearLayout>

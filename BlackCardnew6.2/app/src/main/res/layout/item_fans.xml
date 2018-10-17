@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_marginLeft="15dp">
+
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/iv_image"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:maxEms="8"
+                android:maxLines="1"
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:textColor="@color/nine_b"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_huyuankanid"
+                android:layout_width="40dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="10dp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_fansCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="48dp"
+            android:layout_toRightOf="@+id/iv_image"
+            android:text="415616"
+            android:textColor="@color/eight_four"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/iv_guanzhu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp" />
+
+        <TextView
+            android:id="@+id/tv_isF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/e_e" />
+    </RelativeLayout>
+
+</LinearLayout>

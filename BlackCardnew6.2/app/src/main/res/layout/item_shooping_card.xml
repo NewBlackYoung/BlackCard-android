@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_sp"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/white"
+    android:layout_marginTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <CheckBox
+
+        android:id="@+id/ck_item_sp"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:button="@drawable/selector_checkbox" />
+
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/iv_image_sp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="9dp"
+        android:layout_toRightOf="@+id/ck_item_sp"
+        android:background="@mipmap/icon_def" />
+
+    <TextView
+        android:id="@+id/tv_titleItem_sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/item_left_shop"
+        android:layout_toRightOf="@+id/iv_image_sp"
+        android:ellipsize="end"
+        android:maxEms="7"
+        android:maxLines="1"
+        android:text="青黑钻书单干嗨森"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/iv_xiajia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/tv_titleItem_sp"
+        android:background="@mipmap/yixiajia" />
+
+    <ImageView
+        android:id="@+id/iv_bianji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="2dp"
+        android:src="@mipmap/biianji" />
+
+    <TextView
+        android:id="@+id/tv_wancheng_sp"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/shap_jiesuan"
+        android:gravity="center"
+        android:text="完成"
+        android:textColor="@color/e_eight"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <!--商品个数 和单价 和原价-->
+    <RelativeLayout
+
+        android:id="@+id/lay_countPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/tv_titleItem_sp"
+        android:layout_marginLeft="@dimen/item_left_shop"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/iv_image_sp">
+
+        <TextView
+            android:id="@+id/k"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="型号: "
+            android:textColor="@color/naine_five"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_kind_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/k"
+            android:text="A款"
+            android:textColor="@color/naine_five"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="x "
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_countItem_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/x"
+            android:text="2"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_priceItem_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="15dp"
+            android:text="¥2298"
+            android:textColor="@color/e_eight"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_old_price"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/tv_priceItem_sp"
+            android:background="@mipmap/xian_h"
+            android:gravity="center"
+            android:text="¥ 2206"
+            android:textColor="@color/a_b" />
+
+    </RelativeLayout>
+    <!-- 加减号 单个删除按钮-->
+    <RelativeLayout
+        android:id="@+id/lay_jiaJian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="@dimen/item_left_shop"
+        android:layout_toRightOf="@+id/iv_image_sp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_jianhao_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/jianhao_sp" />
+
+        <TextView
+            android:id="@+id/tv_countItem"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_jianhao_sp"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_jiahao_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_countItem"
+            android:src="@mipmap/jiahao_sp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

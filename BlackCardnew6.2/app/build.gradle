@@ -1,0 +1,179 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+MobSDK {
+    appKey "145fcc39234b4"
+    appSecret "bf5eedb9fcab9b4d24c8435d3df2a3f0"
+
+    ShareSDK {
+        //平台配置信息
+        devInfo {
+            SinaWeibo {
+                appKey "2117089530"
+                appSecret "38d0225c727fac3ae9f5ee5f1b4b439e"
+                callbackUri "http://www.sharesdk.cn"
+                shareByAppClient false
+            }
+            Wechat {
+                appId "wx343550af32846843"
+                appSecret "aaQgw3ErafLpdPG8CUnszWTTza6M1"
+            }
+            WechatMoments {
+                appId "wx343550af32846843"
+                appSecret "aaQgw3ErafLpdPG8CUnszWTTza6M1"
+            }
+            QQ {
+                appId "100371282"
+                appKey "aed9b0303e3ed1e27bae87c33761161d"
+                shareByAppClient true
+            }
+
+            SMSSDK {}
+        }
+    }
+
+}
+ext {
+    // 将 sdk 放到单独的进程
+    processName = ":ppd_sdk"
+}
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.sainti.blackcard"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 32
+        versionName "5.0.6"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        ndk {
+            //根据需要 自行选择添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                processName  : processName,
+                XG_ACCESS_ID : "2100312557",
+                XG_ACCESS_KEY: "AC91H81PKA5F",
+        ]
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false // 是否移除无用文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false  // 是否混淆
+            shrinkResources false // 是否移除无用文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    /*拍拍贷集成需要*/
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/MANIFEST.MF'
+        exclude '.readme'
+
+    }
+    repositories {
+        flatDir {
+            dirs 'libs' //就是你放aar的目录地址
+        }
+    }
+
+}
+
+dependencies {
+    // implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:support-vector-drawable:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.jaeger.statusbarutil:library:1.4.0'
+    //沉浸式状态栏
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    // 事件分发机制
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.38'
+    // base适配器
+    implementation 'com.contrarywind:Android-PickerView:4.1.0'
+    // 地区选择器
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4'
+    // 上拉刷险和加载
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.3'
+    //一个开源gif控件
+    implementation files('libs/ormlite-core-5.0.jar')
+    implementation files('libs/ormlite-android-5.0.jar')
+    // ORMlite 数据库
+    implementation 'com.google.code.gson:gson:2.8.0'
+    // gson转换器
+    implementation project(':pictureselector')
+    implementation files('libs/alipaySdk-20170922.jar')
+    // 支付宝支付
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    // 最新的微信支付依赖
+    implementation files('libs/core-3.2.1.jar')
+    // 下面拍拍贷aar 的依赖库
+    implementation 'com.alibaba:fastjson:1.2.8'
+    implementation('org.apache.httpcomponents:httpmime:4.3.5') {
+        exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+    }
+    implementation 'org.apache.httpcomponents:httpclient-android:4.3.5'
+    implementation 'com.mcxiaoke.volley:library:1.0.19'
+    // 注意这里，需要将官方Volley 改为这个，避免因Volley 引起的内存泄漏。
+    implementation('com.github.hotchemi:permissionsdispatcher:3.0.1') {
+        exclude group: 'com.github.hotchemi.permissionsdispatcher', module: 'permissionsdispatcher-processor'
+    }
+    implementation(name: 'ppd-loan-sdk-3.0.2', ext: 'aar')
+    //EaseUI中 头像获取用到了glide，请添加glide库
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    //EaseUI中，fragment用到了android-support-v4包
+    implementation 'com.android.support:support-v4:23.1.1'
+    implementation project(':kefu-easeui')
+    // 以上是环信
+    implementation 'com.github.ome450901:SimpleRatingBar:1.4.1'
+    /* 以下是信鸽*/
+    implementation 'com.tencent.xinge:xinge:3.2.3-release'
+    implementation 'com.tencent.wup:wup:1.0.0.E-release'
+    implementation 'com.tencent.mid:mid:4.0.6-release'
+    /* 以下是友盟*/
+    implementation 'com.umeng.sdk:common:latest.integration'
+    implementation 'com.umeng.sdk:analytics:latest.integration'
+    /*照片裁剪*/
+    implementation 'com.github.yalantis:ucrop:2.2.2'
+    implementation files('libs/AMap3DMap_6.2.0_AMapNavi_6.1.0_AMapLocation_4.0.1_20180427.jar')
+    implementation project(':library')
+    implementation 'com.android.support:cardview-v7:21.0.+'
+    /*黄油刀*/
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+}
